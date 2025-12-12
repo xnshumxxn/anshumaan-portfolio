@@ -1,0 +1,7 @@
+:root { --bg:#f5f7fb; --accent:#111; --muted:#555; font-family:Inter,system-ui,Arial; }
+body { margin:0; background:var(--bg); color:var(--accent); padding:24px; }
+.site-header { text-align:center; padding:24px 0; }
+.site-header h1 { margin:0; font-size:2rem; }
+.about, .projects { background:#fff; border-radius:10px; padding:16px; margin:16px auto; max-width:900px; }
+.card { padding:12px; border-radius:8px; background:#f0f3f6; margin:8px 0; }
+.site-footer { text-align:center; margin-top:24px; color:var(--muted); font-size:14px; }
