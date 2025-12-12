@@ -3,171 +3,131 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Your Name — Creative Portfolio</title>
-  <link rel="stylesheet" href="/style.css" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Portfolio: thumbnails • video edits • scripts" />
+  <meta name="description" content="Portfolio — thumbnails • video edits • scripts">
 </head>
 <body>
-  <div class="site">
-    <header class="top">
-      <div class="wrap">
-        <div class="brand">
-          <div class="logo">YN</div>
-          <div class="title">
-            <h1>Your Name</h1>
-            <div class="role">Thumbnail designer • Video editor • Scriptwriter</div>
-          </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div class="brand-text">
+          <h1 class="site-name">Your Name</h1>
+          <div class="role">Thumbnail designer • Video editor • Scriptwriter</div>
         </div>
-        <nav class="nav">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <button class="menu-btn" aria-label="menu">☰</button>
       </div>
-    </header>
 
-    <main class="wrap main-grid">
-      <section class="about-card card" id="about">
-        <div class="intro">
-          <h2>Hi — I make content that converts</h2>
-          <p>I design attention-grabbing thumbnails, edit short videos (reels & shorts), and write tight hooks & scripts. I help creators grow views and save time.</p>
+      <nav class="top-nav" aria-label="Main navigation">
+        <a href="#skills">Skills</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#startups">Startups</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-          <div class="skills">
-            <span class="skill">Canva</span>
-            <span class="skill">Photopea</span>
-            <span class="skill">CapCut</span>
-            <span class="skill">Filmora</span>
-            <span class="skill">Scriptwriting</span>
-          </div>
+      <button class="menu-toggle" aria-label="open menu">☰</button>
+    </div>
+  </header>
 
-          <div class="cta">
-            <a class="btn primary" href="#contact">Hire me</a>
-            <a class="btn ghost" href="/resume.pdf">Resume</a>
-          </div>
+  <main class="wrap">
+    <!-- Hero / Intro -->
+    <section class="hero card">
+      <h2 class="lead">I craft growth-focused visuals and content — brand design, motion & video.</h2>
+      <p class="muted">End-to-end from concept to publish. Fast delivery, clear revisions.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#contact">Hire me</a>
+        <a class="btn ghost" href="/resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+
+    <!-- Skills: External + Internal -->
+    <section id="skills" class="card skills-section">
+      <h3>External Skills</h3>
+      <div class="skills-grid external">
+        <!-- Add logos in /images and update <img> src -->
+        <div class="skill"><img alt="Photoshop" src="/images/ps.svg"><span>Adobe Photoshop</span></div>
+        <div class="skill"><img alt="Premiere" src="/images/pr.svg"><span>Adobe Premiere Pro</span></div>
+        <div class="skill"><img alt="Illustrator" src="/images/ai.svg"><span>Adobe Illustrator</span></div>
+        <div class="skill"><img alt="AE" src="/images/ae.svg"><span>Adobe After Effects</span></div>
+        <div class="skill"><img alt="Canva" src="/images/canva.svg"><span>Canva</span></div>
+        <div class="skill"><img alt="Figma" src="/images/figma.svg"><span>Figma</span></div>
+        <div class="skill"><img alt="CapCut" src="/images/capcut.svg"><span>CapCut</span></div>
+        <div class="skill"><img alt="React" src="/images/react.svg"><span>React</span></div>
+        <div class="skill"><img alt="HTML5" src="/images/html5.svg"><span>HTML5</span></div>
+        <div class="skill"><img alt="CSS3" src="/images/css3.svg"><span>CSS3</span></div>
+      </div>
+
+      <h3 style="margin-top:18px">Internal Skills</h3>
+      <div class="skills-grid internal">
+        <div class="skill-pill">Leadership</div>
+        <div class="skill-pill">Communication</div>
+        <div class="skill-pill">Marketing Strategy</div>
+        <div class="skill-pill">Scriptwriting</div>
+        <div class="skill-pill">Videography</div>
+        <div class="skill-pill">Graphic Design</div>
+      </div>
+    </section>
+
+    <!-- Gallery / Scrollable -->
+    <section id="gallery" class="card gallery-section">
+      <h3>Gallery</h3>
+      <p class="muted">Scroll to browse • Drag to interact</p>
+      <div class="gallery-track" tabindex="0" aria-label="Gallery">
+        <!-- Replace with your thumbnails (jpg/png) sized 1200×675 (16:9) recommended -->
+        <div class="gallery-item" style="background-image:url('/images/sample1.jpg')"></div>
+        <div class="gallery-item" style="background-image:url('/images/sample2.jpg')"></div>
+        <div class="gallery-item" style="background-image:url('/images/sample3.jpg')"></div>
+        <div class="gallery-item" style="background-image:url('/images/sample4.jpg')"></div>
+        <div class="gallery-item" style="background-image:url('/images/sample5.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- Startups -->
+    <section id="startups" class="card startups">
+      <h3>Startups</h3>
+
+      <div class="startup-grid">
+        <div class="startup">
+          <div class="logo-sm" style="background-image:url('/images/networthwars.png')"></div>
+          <h4>NetWorthWars</h4>
+          <div class="muted small">Role: Marketing Lead</div>
+          <p>A gamified personal-finance experience for tracking, benchmarking & building net worth.</p>
         </div>
 
-        <div class="features">
-          <div class="feat">
-            <h3>Quick Delivery</h3>
-            <p>1–2 day turnaround for short edits & thumbnails.</p>
-          </div>
-          <div class="feat">
-            <h3>Clear Revisions</h3>
-            <p>2 rounds of revisions included for every project.</p>
-          </div>
-        </div>
-      </section>
-
-      <aside class="side-card card contact" id="contact">
-        <div class="photo">Your<br/>Photo</div>
-        <h3>Your Name</h3>
-        <div class="muted">Thumbnail Designer • Video Editor</div>
-        <p class="muted small">Open for paid gigs — quick delivery — DM or email</p>
-
-        <div class="contact-actions">
-          <a class="btn primary block" href="mailto:youremail@example.com">Email me</a>
-          <a class="btn ghost block" href="https://instagram.com/yourhandle">Instagram</a>
-          <a class="btn ghost block" href="tel:+911234567890">Call</a>
+        <div class="startup">
+          <div class="logo-sm" style="background-image:url('/images/gloyv.png')"></div>
+          <h4>Gloyv</h4>
+          <div class="muted small">Role: Founder</div>
+          <p>Gen-Z clothing, accessories & decor e-store — modern lifestyle pieces.</p>
         </div>
 
-        <div class="note muted">Tip: Add sample thumbnails (images) and one YouTube or Reel embed to show your editing style.</div>
-      </aside>
-
-      <section class="projects-card card" id="projects">
-        <h2>Selected Work</h2>
-        <p class="muted">Click a project to view details. Replace these placeholders with your real images & links.</p>
-
-        <div class="projects-grid">
-          <article class="project" tabindex="0">
-            <div class="thumb" style="background-image:url('/images/thumb1.jpg')"></div>
-            <div class="meta">
-              <h3>Thumbnail — Bold Cutout</h3>
-              <p class="muted">High contrast, readable title — made for growth</p>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <div class="thumb video-thumb">▶</div>
-            <div class="meta">
-              <h3>Reel Edit — Study Tips (30s)</h3>
-              <p class="muted">Fast cuts, captions, and beat-sync transitions.</p>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <div class="thumb" style="background-image:url('/images/thumb3.jpg')"></div>
-            <div class="meta">
-              <h3>Script — Hook + 3 Tips</h3>
-              <p class="muted">Short script optimized for retention and shares.</p>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <div class="thumb" style="background-image:url('/images/thumb4.jpg')"></div>
-            <div class="meta">
-              <h3>Montage — Best Moments</h3>
-              <p class="muted">Dynamic edits, smooth color grading.</p>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <div class="thumb" style="background-image:url('/images/thumb5.jpg')"></div>
-            <div class="meta">
-              <h3>Client: Local Tutor</h3>
-              <p class="muted">Regular weekly edits & thumbnails for lectures.</p>
-            </div>
-          </article>
-
-          <article class="project" tabindex="0">
-            <div class="thumb" style="background-image:url('/images/thumb6.jpg')"></div>
-            <div class="meta">
-              <h3>Thumbnail — Vlog</h3>
-              <p class="muted">Clean composition and expressive face.</p>
-            </div>
-          </article>
+        <div class="startup">
+          <div class="logo-sm" style="background-image:url('/images/halfway.png')"></div>
+          <h4>Halfway</h4>
+          <div class="muted small">Role: Head of Sales</div>
+          <p>Media & content initiative exploring stories, visuals & technology at the halfway point of ideas.</p>
         </div>
+      </div>
+    </section>
 
-        <div class="more muted">Want this layout with your real files? I can give you exact image sizes and export settings.</div>
-      </section>
+    <!-- Contact -->
+    <section id="contact" class="card contact-card">
+      <h3>Contact</h3>
+      <p class="muted">Open for freelance projects and collaborations.</p>
+      <div class="contact-row">
+        <a class="btn primary" href="mailto:youremail@example.com">Email me</a>
+        <a class="btn ghost" href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
 
-      <section class="testimonials card">
-        <h2>Testimonials</h2>
-        <blockquote class="muted">"Saved my time — views increased 2x. Quick turnaround." — @creatorname</blockquote>
-      </section>
-
-    </main>
-
-    <footer class="wrap footer">
-      <div>Share the link with clients: <strong>yourname.vercel.app</strong></div>
-      <div class="muted small">Made with care. Update files on GitHub to auto-deploy.</div>
+    <footer class="card footer">
+      <div>© Your Name <span class="muted">All rights reserved.</span></div>
+      <div class="muted small">Built with a simple static site • Update on GitHub to redeploy</div>
     </footer>
-  </div>
+  </main>
 
-  <script>
-    // small interactive scripts: mobile menu + keyboard focus for projects
-    document.querySelector('.menu-btn').addEventListener('click', () => {
-      document.querySelector('.nav').classList.toggle('open');
-    });
-
-    // keyboard focus: open project details (future enhancement)
-    document.querySelectorAll('.project').forEach(p => {
-      p.addEventListener('keypress', (e) => { if (e.key === 'Enter') p.click(); });
-      p.addEventListener('click', () => {
-        alert('Replace this alert with a modal or link to your project page.');
-      });
-    });
-
-    // smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function(e){
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  </script>
+  <script src="/script.js"></script>
 </body>
 </html>
